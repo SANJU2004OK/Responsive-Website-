@@ -1,0 +1,74 @@
+
+/*very is Concept By sanju */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    color: aliceblue;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.5fr 1.3fr 0.8fr;
+    background-color: rgb(255, 255, 255);
+    grid-template-areas: "navbar navbar navbar navbar"
+        "sidebar main main main"
+        "sidebar box1 box2 box3"
+        "sidebar fotter fotter fotter";
+    grid-gap: 0.3rem;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+nav {
+    background-color: rgb(142, 196, 196);
+    grid-area: navbar;
+}
+
+main {
+    background-color: rgb(53, 44, 212);
+    grid-area: main;
+}
+
+.sidebar {
+    background-color: rgb(255, 123, 0);
+    grid-area: sidebar;
+}
+
+.box1 {
+    background-color: rgb(171, 209, 20);
+    grid-area: box1;
+}
+
+.box2 {
+    background-color: rgb(0, 255, 26);
+    grid-area: box2
+}
+
+.box3 {
+    grid-area: box3;
+    background-color: rgb(75, 110, 110);
+}
+
+footer {
+    background-color: aqua;
+    grid-area: fotter
+}
+
+@media only screen and(max-width:640px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 2fr 0.2fr 1.2fr 1.2fr 1.2fr 1fr ;
+    grid-template-areas: "navbar"
+    "main"
+    "sidebar"
+    "box1"
+    "box2"
+    "box3"
+    "fotter";
+    }
+}
